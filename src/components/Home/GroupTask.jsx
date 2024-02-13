@@ -1,15 +1,26 @@
-import React from 'react'
-import NewInput from './NewInput'
+import React, { useRef } from 'react';
 
 const GroupTask = () => {
-  return (
-    <div>
-        <h2></h2>
-        <input type="text" />
-        <button>+</button>
-        <NewInput/>
-    </div>
-  )
-}
+    const inputRef = useRef(null);
 
-export default GroupTask
+    const createField = () => {
+        const newField = document.createElement("div");
+        newField.innerHTML = `
+            <input type="text">
+            <button>-</button>
+        `;
+        inputRef.current.appendChild(newField);
+    };
+
+    return (
+        <div>
+            <h2></h2>
+            <input type="text" />
+            <button onClick={createField}>+</button>
+            <div ref={inputRef}></div>
+        
+        </div>
+    );
+};
+
+export default GroupTask;
