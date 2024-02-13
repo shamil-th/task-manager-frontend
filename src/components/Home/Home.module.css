@@ -1,0 +1,43 @@
+.overlay{
+    height: 100vh;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    overflow: scroll;
+}
+.modal{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.buttons button{
+    background-color: rgb(0, 106, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: white;
+    width: fit-content;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.input_area{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid gray;
+    padding: 20px;
+}
